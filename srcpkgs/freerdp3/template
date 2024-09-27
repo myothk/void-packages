@@ -1,6 +1,6 @@
 # Template file for 'freerdp3'
 pkgname=freerdp3
-version=3.6.2
+version=3.8.0
 revision=1
 build_style=cmake
 build_helper=qemu
@@ -25,7 +25,7 @@ makedepends="alsa-lib-devel cups-devel fuse3-devel icu-devel libXcursor-devel
  libXdamage-devel libXinerama-devel libXrandr-devel libXv-devel
  libjpeg-turbo-devel libusb-devel libxkbfile-devel mit-krb5-devel openssl-devel
  pulseaudio-devel uriparser-devel $(vopt_if aad cJSON-devel)
- $(vopt_if ffmpeg ffmpeg-devel cairo-devel) $(vopt_if sdl2 SDL2_ttf-devel)
+ $(vopt_if ffmpeg ffmpeg6-devel cairo-devel) $(vopt_if sdl2 SDL2_ttf-devel)
  $(vopt_if smartcard 'pcsclite-devel pkcs11-helper-devel')
  $(vopt_if wayland 'libxkbcommon-devel wayland-devel')
  $(vopt_if webview libwebkit2gtk41-devel)"
@@ -35,7 +35,7 @@ license="Apache-2.0"
 homepage="https://www.freerdp.com/"
 changelog="https://raw.githubusercontent.com/FreeRDP/FreeRDP/master/ChangeLog"
 distfiles="https://github.com/FreeRDP/FreeRDP/archive/${version}.tar.gz"
-checksum=e16260946a1d3289339bf158f335d9dddd9af43b96050b6b6fba287310df9924
+checksum=e313934a77a0bcca3af803455dd9ea1aa2f657c598e3397325aa48e6effd450d
 CFLAGS="-Wno-dev"
 
 # wayland - deprecated, sdl2 - experimental
